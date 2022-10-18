@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t rosscournoyer/ci-cd-test -f Dockerfile .
+  - docker build -t rosscournoyer/ci-cd-test -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true rosscournoyer/ci-cd-test npm run test
